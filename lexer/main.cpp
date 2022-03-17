@@ -14,12 +14,16 @@ int main()
     string dfafile;
     string tokenfile;
     string keywordfile;
+    string sourcefile;
     cout << "Please input the file path for your DFA state table.\n";
     std::cin >> dfafile;
     cout << "Please input the file path for the token table.\n";
     std::cin >> tokenfile;
     cout << "Please input the file path for the keyword identifier.\n";
     std::cin >> keywordfile;
+    cout << "Please input the file path for the source file to tokenize.\n";
+    std::cin >> sourcefile;
+
 
 
 
@@ -35,7 +39,7 @@ int main()
 
 
  
-    std::ifstream in("C:\\test.txt");
+    std::ifstream in(sourcefile);
 
     std::stringstream buff;
     buff << in.rdbuf();
